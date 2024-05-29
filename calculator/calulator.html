@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <p class="calculation-space"></p>
+      
+      <p>
+        <button onclick="
+          calculation= '';
+          updatedCalculation('6')" class="calculator-btn ash-btn">C</button>
+        <button onclick="" class="calculator-btn ash-btn">M</button>
+        <button onclick="" class="calculator-btn ash-btn">%</button>
+        <button onclick="" class="calculator-btn orange-btn">/</button>
+      </p>
+      <p>
+        <button onclick="
+          updatedCalculation('9')"
+           class="calculator-btn gray-btn">9</button>
+        <button onclick="
+        updatedCalculation('8')"
+         class="calculator-btn gray-btn">8</button>
+        <button onclick="
+        updatedCalculation('7')" 
+        class="calculator-btn gray-btn">7</button>
+        <button onclick="
+        updatedCalculation('*')"
+         class="calculator-btn orange-btn">x</button>
+      </p>
+      <p>
+        <button onclick="
+          updatedCalculation('6')" class="calculator-btn gray-btn">6</button>
+        <button onclick="
+        
+        updatedCalculation('5')" class="calculator-btn gray-btn">5</button>
+        <button onclick="
+        updatedCalculation('4')"
+         class="calculator-btn gray-btn">4</button>
+        <button onclick="
+        updatedCalculation('-')"
+         class="calculator-btn orange-btn">-</button>
+      </p>
+      <p>
+        <button onclick="
+          updatedCalculation('3')" 
+          class="calculator-btn gray-btn">3</button>
+        <button onclick="
+        updatedCalculation('2')" 
+        class="calculator-btn gray-btn">2</button>
+        <button onclick="
+        updatedCalculation('1')" 
+        class="calculator-btn gray-btn">1</button>
+        <button onclick="
+        updatedCalculation('+')" 
+        class="calculator-btn orange-btn">+</button>
+      </p>
+      <p>
+        
+        <button onclick="
+          updatedCalculation('0')" class="calculator-btn gray-btn zero-btn">0</button>
+        <button onclick="
+        updatedCalculation('.')" 
+        class="calculator-btn gray-btn">.</button>
+        <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);" 
+        class="calculator-btn orange-btn">=</button>
+      </p>
+    </div>
+
+    <script>
+      let calculation='';
+      
+      function updatedCalculation(value){
+        calculation += value  ;
+        console.log(calculation);
+
+        document.querySelector('.calculation-space').innerHTML = calculation;
+      }
+
+      
+    </script>
+  </body>
+</html> 
